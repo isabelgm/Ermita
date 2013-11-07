@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">
+<title>Ermita</title>
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/colors/beige.css" id="colors">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Java Script
+================================================== -->
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/jquery.themepunch.plugins.min.js"></script>
+<script src="scripts/jquery.themepunch.revolution.min.js"></script>
+<script src="scripts/jquery.themepunch.showbizpro.min.js"></script>
+<script src="scripts/jquery.easing.min.js"></script>
+<script src="scripts/jquery.tooltips.min.js"></script>
+<script src="scripts/jquery.magnific-popup.min.js"></script>
+<script src="scripts/jquery.superfish.js"></script>
+<script src="scripts/jquery.twitter.js"></script>
+<script src="scripts/jquery.flexslider.js"></script>
+<script src="scripts/jquery.jpanelmenu.js"></script>
+<script src="scripts/jquery.contact.js"></script>
+<script src="scripts/jquery.isotope.min.js"></script>
+<script src="scripts/custom.js"></script>
+
+<!-- Google Maps -->
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="scripts/jquery.gmaps.min.js"></script>
+
+</head>
+<body>
+
+
+<!-- Header
+================================================== -->
+<header id="header">
+
+<!-- Container -->
+<div class="container">
+		
+	<!-- Logo / Mobile Menu -->
+	<div class="three columns">
+	
+		<div id="mobile-navigation">
+			<form method="GET" id="menu-search" action="#">
+				<input type="text" placeholder="Start Typing..." />
+			</form>
+			<a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
+			<span class="search-trigger"><i class="icon-search"></i></span>
+		</div>
+
+		<div id="logo">
+			<h1><a href="index.html"><img src="images/logo.png" alt="Astrum" /></a></h1>
+		</div>
+	</div>
+
+
+<!-- Navigation
+================================================== -->
+<div class="thirteen columns">
+
+	<nav id="navigation" class="menu">
+		<ul id="responsive">
+
+			<li><a href="index.html">Inicio</a></li>
+
+			<li><a href="nosotros.html">Nosotros</a></li>
+
+			<li><a href="#">Educación</a>
+				<ul>
+					<li><a href="certificacion.html">Certificación Galileo</a></li>
+					<li><a href="seminarios.html">Seminarios</a></li>
+					<li><a href="capacitaciones.html">Capacitaciones</a></li>
+				</ul>
+			</li>
+
+			<li><a href="alzheimer.html">¿Qué es el Alzheimer?</a>
+
+
+			<li><a href="contact.html" id="current">Contacto</a></li>
+			
+			<!-- Search Form		
+			<li class="search-container">
+				<div id="search-form">
+					<form method="get" action="#">
+						<input type="text" class="search-text-box" />
+					</form>
+				</div>
+			</li>
+			Search Form / End -->
+		</ul>
+	</nav>
+</div>
+
+</div>
+<!-- Container / End -->
+
+</header>
+<!-- Header / End -->
+
+
+<!-- Content Wrapper / Start -->
+<div id="content-wrapper">
+
+<!-- Titlebar
+================================================== -->
+<section id="titlebar">
+	<!-- Container -->
+
+</section>
+
+
+<!-- Content
+================================================== -->
+
+<!-- Container -->
+<div class="container">
+	<div class="sixteen columns">
+		<h3 class="headline">Ubicación</h3><span class="line" style="margin-bottom: 35px;"></span><div class="clearfix"></div>
+	</div>
+</div>
+<!-- Container / End -->
+
+
+<!-- Container -->
+<div class="container">
+	<div class="sixteen columns">
+
+		<!-- Google Maps -->
+		<section class="google-map-container">
+
+			<div id="googlemaps" class="google-map google-map-full"></div>
+
+			<script type="text/javascript">
+				jQuery('#googlemaps').gMap({
+					maptype: 'ROADMAP',
+					scrollwheel: false,
+					zoom: 14,
+					markers: [
+						{
+							address: '10 Av. "A" 1-48 Zona 1 guatemalar', 
+							html: '',
+							popup: false,
+						}
+					],
+				});
+			</script>
+
+		</section>
+		<!-- Google Maps / End -->
+
+	</div>
+</div>
+<!-- Container / End -->
+			
+
+<!-- Container -->
+<div class="container">
+
+<div class="twelve alt columns">
+
+	<h3 class="headline">Contacto</h3><span class="line" style="margin-bottom: 35px;"></span><div class="clearfix"></div>
+	
+	<!-- Contact Form -->
+	<section id="contact">
+
+		<!-- Success Message -->
+		<mark id="message"></mark>
+
+		<!-- Form -->
+		<form method="post" action="contact.php" name="contactform" id="contactform">
+
+			<fieldset>
+
+				<div>
+					<label for="name" accesskey="U">Nombre:</label>
+						<input name="name" type="text" id="name" />
+				</div>
+
+				<div>
+					<label for="email" accesskey="E">Correo: <span>*</span></label>
+					<input name="email" type="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" />
+				</div>
+
+				<div>
+					<label for="comments" accesskey="C">Mensaje: <span>*</span></label>
+					<textarea name="comments" cols="40" rows="3" id="comments" spellcheck="true"></textarea>
+				</div>
+
+			</fieldset>
+
+			<input type="submit" class="submit" id="submit" value="Enviar" />
+			<div class="clearfix"></div>
+
+		</form>
+
+	</section>
+	<!-- Contact Form / End -->
+
+</div>
+<!-- Container / End -->
+
+
+<!-- Sidebar
+================================================== -->
+<div class="four columns">
+
+	<!-- Information -->
+	<div class="widget" style="margin-top:0;">
+		<h3 class="headline">Información</h3><span class="line"></span><div class="clearfix"></div>
+		<p>Ermita es una Asociación Guatemalteca, privada, no lucrativa; que proporciona alivio y colaboración a personas con la enfermedad de Alzheimer y a sus familiares. </p>
+
+		<ul class="contact-informations">
+			<li><span class="address">10 Av. &quot;A&quot; 1-48 Zona 1</span></li>
+			<li><span class="address">Guatemala Cuidad, Guatemala</span></li>
+		</ul>
+
+		<ul class="contact-informations second">
+			<li><i class="icon-user"></i> <p>+502 2332 0324</p></li>
+			<li><i class="icon-envelope-alt"></i> <p>donernesto@grupoermita.com</p></li>
+		</ul>
+
+	</div>
+	
+	<!-- Social -->
+	
+
+</div>
+</div>
+<!-- Container / End -->
+
+
+</div>
+<!-- Content Wrapper / End -->
+
+
+<!-- Footer
+================================================== -->
+<div id="footer">
+
+	<!-- Container -->
+	<div class="container">
+
+		<div class="six columns">
+			<h3> Asociación Grupo Ermita</h3>
+			<p style="margin:0;">Ermita es una Asociación Guatemalteca, privada, no lucrativa; que proporciona alivio y colaboración a personas con la enfermedad de Alzheimer y a sus familiares.</p>
+		</div>
+
+		<div class="six columns">
+			<h3>Contáctanos</h3>
+			<ul class="get-in-touch">
+				<li ><i class="icon-map-marker"></i> <p><strong>Dirección:</strong> 10 Av. &quot;A&quot; 1-48 Zona 1. Guatemala.</p></li>
+				<li><i class="icon-user"></i> <p><strong>Teléfono:</strong> +502 2332 0324</p></li>
+				<li><i class="icon-envelope-alt"></i> <p><strong>Correo:</strong> <a href="#">mail@example.com</a></p></li>
+			</ul>
+		</div>
+
+			<div class="four columns">
+			<h3> Facebook </h3>
+			<ul class="social-icons">
+				<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
+			</ul>
+		</div>
+
+	</div>
+	<!-- Container / End -->
+
+</div>
+<!-- Footer / End -->
+
+<!-- Footer Bottom / Start -->
+<div id="footer-bottom">
+
+	<!-- Container -->
+	<div class="container">
+
+		<div class="eight columns" id="nombre">© Hecho por Alejandro e Isabel. All Rights Reserved.</div>
+	
+
+	</div>
+	<!-- Container / End -->
+
+</div>
+<!-- Footer Bottom / Start -->
+
+</body>
+</html>
